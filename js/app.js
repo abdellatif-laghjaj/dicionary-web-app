@@ -5,5 +5,6 @@ createApp({
         return {
             message: 'Hello Vue!'
         }
-    }
+    },
+    vuetify: new Vuetify(),
 }).mount('#app')
