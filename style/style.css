@@ -74,6 +74,9 @@ body {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
-        margin: 0 20px;
+    }
+
+    .container header h1{
+        font-size: 1.5rem;
     }
 }
