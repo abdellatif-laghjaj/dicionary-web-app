@@ -44,17 +44,23 @@
                         <p class="font-bold">
                             {{ dic.word }}
                         </p>
-                        <p></p>
+                        <p>
+                            {{ dic.partOfSpeech }}
+                        </p>
                     </div>
 
                     <div class="bg-warning border-l-4 border-orange text-white p-4 my-2" role="alert">
-                        <p class="font-bold">Be Warned</p>
-                        <p>Something not ideal might be happening.</p>
+                        <p class="font-bold">Meaning</p>
+                        <p>
+                            {{ dic.meaning }}
+                        </p>
                     </div>
 
                     <div class="bg-info border-l-4 border-orange text-white p-4 my-2" role="alert">
-                        <p class="font-bold">Be Warned</p>
-                        <p>Something not ideal might be happening.</p>
+                        <p class="font-bold">Example</p>
+                        <p>
+                            {{ dic.example }}
+                        </p>
                     </div>
                 </div>
             </div>
