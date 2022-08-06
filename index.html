@@ -14,7 +14,7 @@
 
 <body>
     <div id="app">
-        <div class="container" v-if="!isLoaded">
+        <div class="container" v-if="isLoaded">
             <header class="flex flex-col justify-between items-center">
                 <h1 class="my-2 text-3xl font-bold" style="color: #fff;">Abdel<span class="text-primary">.</span>
                     DICTIONARY</h1>
@@ -94,7 +94,7 @@
         </div>
 
         <!-- Loader -->
-        <div class="loader">
+        <div class="loader" v-else>
             <lottie-player 
             src="/res/loader.json" 
             background="transparent"  
