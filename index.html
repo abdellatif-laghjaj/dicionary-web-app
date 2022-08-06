@@ -20,7 +20,8 @@
                 <div class="search-box my-2 w-full">
                     <div class="form-control">
                         <div class="input-group">
-                            <input type="text" placeholder="Type a word here..." class="input input-bordered w-full" v-model="word">
+                            <input type="text" placeholder="Type a word here..." class="input input-bordered w-full"
+                                v-model="word">
                             <button class="btn btn-square" @click="searchWord">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
@@ -37,20 +38,23 @@
 
             <!-- list of dics-->
             <div class="output">
-                <div class="card w-96 bg-primary text-primary-content">
+                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index)in output" :key="index">
                     <div class="card-body">
-                      <h2 class="card-title">Card title!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M15 8a5 5 0 0 1 0 8" />
-                                <path d="M17.7 5a9 9 0 0 1 0 14" />
-                                <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
-                              </svg>
-                        </button>
-                      </div>
+                        <h2 class="card-title">{{ dic.word }}</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M15 8a5 5 0 0 1 0 8" />
+                                    <path d="M17.7 5a9 9 0 0 1 0 14" />
+                                    <path
+                                        d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
