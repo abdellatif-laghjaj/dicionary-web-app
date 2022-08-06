@@ -19,6 +19,10 @@ body {
     align-items: center;
 }
 
+::selection {
+    background: #5BB318;
+    color: #fff;
+}
 
 .container {
     min-width: 600px;
