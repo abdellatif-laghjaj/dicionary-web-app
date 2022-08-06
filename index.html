@@ -17,6 +17,19 @@
         <div class="container">
             <header class="flex flex-col justify-between items-center">
                 <h1 class="my-2 text-2xl">Dictionary</h1>
+
+                <!-- Error -->
+                <div class="alert alert-error shadow-lg" v-if="error">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>{{ error }}</span>
+                    </div>
+                </div>
+
                 <div class="search-box my-2 w-full">
                     <div class="form-control">
                         <div class="input-group">
@@ -38,8 +51,7 @@
 
             <!-- list of dics-->
             <div class="output">
-                <div v-for="(dic, index) in output" :key="index"
-                    v-if="output.length > 0">
+                <div v-for="(dic, index) in output" :key="index" v-if="output.length > 0">
                     <div class="bg-accent border-l-4 border-white text-white p-4 my-2" role="alert">
                         <p class="font-bold">
                             {{ dic.word }}

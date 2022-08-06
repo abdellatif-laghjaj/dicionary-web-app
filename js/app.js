@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello Vue!',
+            error: '',
             url: ' https://api.dictionaryapi.dev/api/v2/entries/en/',
             word: '',
             fields: {
@@ -45,7 +45,12 @@ createApp({
                         audio: '',
                     };
                 })
-                .catch(error => alert(error));
+                .catch(error => {
+                    this.error = error;
+                    setInterval(() => {
+                        this.error = '';
+                    }, 3000);
+                });
         },
         playAudio(audio){
             const audio_to_play = new Audio(audio);
