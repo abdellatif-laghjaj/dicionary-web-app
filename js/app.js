@@ -14,6 +14,7 @@ createApp({
                 audio: '',
             },
             output: [],
+            isLoaded: false,
         }
     },
     methods: {
@@ -61,6 +62,14 @@ createApp({
         playAudio(audio){
             const audio_to_play = new Audio(audio);
             audio_to_play.play();
-        }
+        },
+        loader(){
+            setTimeout(() => {
+                this.isLoaded = true;
+            }, 4000);
+        },
+    },
+    created() {
+        this.loader();
     },
 }).mount('#app');
