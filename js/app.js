@@ -14,7 +14,8 @@ createApp({
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                });
+                })
+                .catch(error => alert(error));
         },
     },
 }).mount('#app');
