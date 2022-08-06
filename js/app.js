@@ -40,8 +40,8 @@ createApp({
                 .catch(error => alert(error));
         },
         playAudio(audio){
-            const audio = new Audio(audio);
-            audio.play();
+            const audio_to_play = new Audio(audio);
+            audio_to_play.play();
         }
     },
 }).mount('#app');

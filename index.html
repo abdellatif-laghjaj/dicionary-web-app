@@ -38,12 +38,12 @@
 
             <!-- list of dics-->
             <div class="output">
-                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index)in output" :key="index">
+                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index) in output" :key="index" v-if="output.length > 0">
                     <div class="card-body">
                         <h2 class="card-title">{{ dic.word }}</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div class="card-actions justify-end">
-                            <button class="btn rounded-full">
+                            <button class="btn rounded-full" @click="playAudio(dic.audio)">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume"
                                     width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
