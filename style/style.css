@@ -20,7 +20,7 @@ body {
 
 
 .container {
-    width: 100%;
+    min-width: 600px;
     max-width: 600px;
     background: #fff;
     border-radius: 5px;

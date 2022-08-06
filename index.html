@@ -16,7 +16,7 @@
     <div id="app">
         <div class="container">
             <header class="flex flex-col justify-between items-center">
-                <h1 class="my-2 text-2xl">Dictionary</h1>
+                <h1 class="my-2 text-3xl font-bold">Abdel<span  class="text-primary">.</span> DICTIONARY</h1>
 
                 <!-- Error -->
                 <div class="alert alert-error shadow-lg" v-if="error">
@@ -47,7 +47,7 @@
                 </div>
             </header>
 
-            <div class="divider">OUTPUT {{ message }}</div>
+            <div class="divider" v-if="output.length > 0">OUTPUT {{ message }}</div>
 
             <!-- list of dics-->
             <div class="output">
