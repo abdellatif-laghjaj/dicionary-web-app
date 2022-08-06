@@ -34,5 +34,17 @@ body {
 }
 
 .card-dic{
-    background-color: #2B4865;
+    background-color: #51557E;
+}
+
+.card-dic:nth-child(1){
+    border-color: #FF1E00;
+}
+
+.card-dic:nth-child(2){
+    border-color: #FF9E00;
+}
+
+.card-dic:nth-child(3){
+    border-color: #34B3F1;
 }
