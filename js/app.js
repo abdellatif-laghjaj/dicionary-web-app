@@ -18,6 +18,12 @@ createApp({
     },
     methods: {
         searchWord() {
+
+            if (this.word === '') {
+                this.error = 'Please enter a word :(';
+                return;
+            }
+
             const full_url = this.url + this.word;
             fetch(full_url)
                 .then(response => response.json())
