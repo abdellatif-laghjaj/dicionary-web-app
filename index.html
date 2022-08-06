@@ -52,19 +52,30 @@
             <!-- list of dics-->
             <div class="output">
                 <div v-for="(dic, index) in output" :key="index" v-if="output.length > 0">
-                    <div class="bg-accent border-l-4 border-white text-white p-4 my-2" role="alert">
-                        <p class="font-bold">
-                            {{ dic.word }}
-                        </p>
-                        <p>
-                            {{ dic.partOfSpeech }}
-                        </p>
+                    <div class="bg-accent border-l-4 border-white text-white p-4 my-2" role="alert"
+                        style="display: flex; align-items: center; justify-content: space-between;">
+                        <div class="word">
+                            <p class="font-bold">
+                                {{ dic.word }}
+                            </p>
+                            <p>
+                                {{ dic.partOfSpeech }}
+                            </p>
+                        </div>
+                        <button class="btn btn-secondary rounded-full" @click="playAudio(dic.audio)">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M15 8a5 5 0 0 1 0 8" />
+                                <path d="M17.7 5a9 9 0 0 1 0 14" />
+                                <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+                              </svg>
+                        </button>
                     </div>
 
                     <div class="bg-warning border-l-4 border-orange text-white p-4 my-2" role="alert">
                         <p class="font-bold">Meaning</p>
                         <p>
-                            {{ dic.meaning }}
+                            {{ dic.definition }}
                         </p>
                     </div>
 

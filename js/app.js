@@ -25,7 +25,7 @@ createApp({
                     
                     //create the fields object
                     this.fields.word = data[0].word;
-                    this.fields.partOfSpeech = data[0].meanings[1].partOfSpeech;
+                    this.fields.partOfSpeech = data[0].meanings[0].partOfSpeech;
                     this.fields.phonetic = data[0].phonetic;
                     this.fields.definition = data[0].meanings[0].definitions[0].definition;
                     this.fields.example = data[0].meanings[0].definitions[0].example;
