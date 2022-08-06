@@ -38,19 +38,21 @@
 
             <!-- list of dics-->
             <div class="output">
-                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index) in output" :key="index"
+                <div v-for="(dic, index) in output" :key="index"
                     v-if="output.length > 0">
-                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
+                    <div class="bg-accent border-l-4 border-white text-white p-4 my-2" role="alert">
+                        <p class="font-bold">
+                            {{ dic.word }}
+                        </p>
+                        <p></p>
+                    </div>
+
+                    <div class="bg-warning border-l-4 border-orange text-white p-4 my-2" role="alert">
                         <p class="font-bold">Be Warned</p>
                         <p>Something not ideal might be happening.</p>
                     </div>
 
-                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
-                        <p class="font-bold">Be Warned</p>
-                        <p>Something not ideal might be happening.</p>
-                    </div>
-
-                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
+                    <div class="bg-info border-l-4 border-orange text-white p-4 my-2" role="alert">
                         <p class="font-bold">Be Warned</p>
                         <p>Something not ideal might be happening.</p>
                     </div>
