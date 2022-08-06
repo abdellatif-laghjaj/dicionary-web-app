@@ -46,7 +46,7 @@ createApp({
                     };
                 })
                 .catch(error => {
-                    this.error = error;
+                    this.error = this.word + ' is not a valid word';
                     setInterval(() => {
                         this.error = '';
                     }, 3000);
