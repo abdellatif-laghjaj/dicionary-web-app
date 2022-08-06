@@ -38,37 +38,21 @@
 
             <!-- list of dics-->
             <div class="output">
-                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index) in output" :key="index" v-if="output.length > 0">
-                    <div class="card-body">
-                        
-                        <div class="data flex flex-row justify-between items-center">
-                            <h2 class="card-title">{{ dic.word }}</h2>
-                            <p class="ml-3">{{ dic.phonetic }}</p>
-                        </div>
-                        
-                        
-                        <p>{{ dic.definition }}</p>
-                        <div class="alert alert-warning shadow-lg">
-                            <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                              <span>
-                                <strong>Example:</strong> {{ dic.example }}
-                              </span>
-                            </div>
-                          </div>
-                        <div class="card-actions justify-end">
-                            <button class="btn rounded-full" @click="playAudio(dic.audio)">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume"
-                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M15 8a5 5 0 0 1 0 8" />
-                                    <path d="M17.7 5a9 9 0 0 1 0 14" />
-                                    <path
-                                        d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
-                                </svg>
-                            </button>
-                        </div>
+                <div class="card w-96 bg-primary text-primary-content" v-for="(dic, index) in output" :key="index"
+                    v-if="output.length > 0">
+                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
+                        <p class="font-bold">Be Warned</p>
+                        <p>Something not ideal might be happening.</p>
+                    </div>
+
+                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
+                        <p class="font-bold">Be Warned</p>
+                        <p>Something not ideal might be happening.</p>
+                    </div>
+
+                    <div class="bg-orange-lightest border-l-4 border-orange text-orange-dark p-4 my-2" role="alert">
+                        <p class="font-bold">Be Warned</p>
+                        <p>Something not ideal might be happening.</p>
                     </div>
                 </div>
             </div>

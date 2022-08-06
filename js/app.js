@@ -31,11 +31,16 @@ createApp({
 
                     console.log(this.fields);
 
-                    this.output.push(this.fields);
+                    this.output[0] = this.fields;
 
-                    // console.log("Original data: ", data);
-                    // console.log("Output: ", this.output);
-                    // console.log("Output: ", this.output[0].word);
+                    //reset the fields object
+                    this.fields = {
+                        word: '',
+                        phonetic: '',
+                        definition: '',
+                        example: '',
+                        audio: '',
+                    };
                 })
                 .catch(error => alert(error));
         },
