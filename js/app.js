@@ -1,10 +1,7 @@
-const { createApp } = Vue
-
-createApp({
-    data() {
-        return {
-            message: 'Hello Vue!'
-        }
-    },
+new Vue({
+    el: '#app',
     vuetify: new Vuetify(),
-}).mount('#app')
+    data: {
+        message: 'Hello Vue!'
+    }
+})
