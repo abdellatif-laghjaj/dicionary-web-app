@@ -67,3 +67,10 @@ body {
     align-items: center;
     z-index: 1;
 }
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 620px){
+    .container {
+        width: 96%;
+    }
+}
