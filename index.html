@@ -14,7 +14,7 @@
 
 <body>
     <div id="app">
-        <div class="container">
+        <div class="container" v-if="!isLoaded">
             <header class="flex flex-col justify-between items-center">
                 <h1 class="my-2 text-3xl font-bold" style="color: #fff;">Abdel<span class="text-primary">.</span>
                     DICTIONARY</h1>
@@ -92,8 +92,19 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <!-- Loader -->
+        <div class="loader">
+            <lottie-player 
+            src="/res/loader.json" 
+            background="transparent"  
+            speed="1"  style="width: 300px; height: 300px;"  
+            loop autoplay>
+        </lottie-player>  
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="js/app.js"></script>
 </body>
 
