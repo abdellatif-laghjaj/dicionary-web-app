@@ -53,8 +53,8 @@
             <!-- list of dics-->
             <div class="output">
                 <div v-for="(dic, index) in output" :key="index" v-if="output.length > 0">
-                    <div class="border-l-4 border-white text-white p-4 my-2" role="alert"
-                        style="display: flex; align-items: center; justify-content: space-between; background-color: #5BB318;">
+                    <div class="border-l-4 border-white text-white p-4 my-2 card-dic" role="alert"
+                        style="display: flex; align-items: center; justify-content: space-between;">
                         <div class="word">
                             <p class="font-bold text-2xl">
                                 {{ dic.word }}
@@ -76,15 +76,14 @@
                         </button>
                     </div>
 
-                    <div class="border-l-4 border-orange text-white p-4 my-2" role="alert"
-                        style="background-color: #FFC23C;">
+                    <div class="border-l-4 border-orange text-white p-4 my-2 card-dic" role="alert">
                         <p class="font-bold text-2xl">Meaning</p>
                         <p>
                             {{ dic.definition }}
                         </p>
                     </div>
 
-                    <div class="bg-secondary border-l-4 text-white p-4 my-2" role="alert">
+                    <div class="border-l-4 text-white p-4 my-2 card-dic" role="alert">
                         <p class="font-bold text-2xl">Example</p>
                         <p>
                             {{ dic.example }}

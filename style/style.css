@@ -32,3 +32,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.card-dic{
+    background-color: #2B4865;
+}
