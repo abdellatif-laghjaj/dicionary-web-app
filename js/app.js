@@ -1,5 +1,4 @@
-import {createApp} from 'vue';
-
+const { createApp } = Vue
 createApp({
     data() {
         return {
@@ -10,7 +9,12 @@ createApp({
     },
     methods: {
         searchWord() {
-            
+            const full_url = this.url + this.word;
+            fetch(full_url)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                });
         },
     },
 }).mount('#app');
